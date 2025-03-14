@@ -1,0 +1,28 @@
+.wj-flexgrid {
+  height: 400px;
+  width: 800px;
+  margin: 6px 0;
+}
+
+.checkbox label input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.checkbox label {
+  margin-right: 10px;
+}
+
+.btn {
+  margin-right: 5px;
+}
+
+.dashboard-wrapper {
+  height: 900px;
+  width: 1000px;
+  max-width: 1500px;
+  backdrop-filter: blur(80px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background: transparent;
+  border-radius: 10px;
+  padding: 30px 40px;
+}
