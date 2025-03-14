@@ -1,9 +1,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
-import RootLayout from "./pages/Root";
+import RootLayout from "./pages/RootPage/RootPage";
 import ErrorPage from "./pages/ErrorPage";
 import LoginForm from "./components/LoginForm/LoginForm";
 import DashboardPage from "./pages/dashboard/DashboardPage";
+import ReportsPage from "./pages/ReportsPage";
 
 const router = createBrowserRouter([
   {
@@ -11,8 +12,9 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
-      { path: "/", element: <LoginForm /> },
+      // { path: "/", element: <LoginForm /> },
       { path: "/dashboard", element: <DashboardPage /> },
+      { path: "/reports", element: <ReportsPage /> },
       // { path: "/products/:productId", element: <ProductDetailPage /> },
     ],
   },

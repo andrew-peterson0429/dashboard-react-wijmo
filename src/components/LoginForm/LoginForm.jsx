@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./LoginForm.css";
 import { FaUser, FaLock } from "react-icons/fa";
 
-export const LoginForm = () => {
+export const LoginForm = ({ onHandleLogin }) => {
   const navigate = useNavigate();
   function navigateHandler() {
     navigate("/dashboard");
@@ -30,7 +30,13 @@ export const LoginForm = () => {
           <a href="#">Forgot password?</a>
         </div>
 
-        <button type="button" onClick={navigateHandler}>
+        <button
+          type="button"
+          onClick={() => {
+            onHandleLogin();
+            navigateHandler();
+          }}
+        >
           Login
         </button>
 

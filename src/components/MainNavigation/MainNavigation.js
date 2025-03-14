@@ -11,10 +11,10 @@ function MainNavigation() {
               className={({ isActive }) =>
                 isActive ? classes.active : undefined
               }
-              to="/"
+              to="/dashboard"
               end={true}
             >
-              Home
+              Dashboard
             </NavLink>
           </li>
           <li>
@@ -22,9 +22,9 @@ function MainNavigation() {
               className={({ isActive }) =>
                 isActive ? classes.active : undefined
               }
-              to="/products"
+              to="/reports"
             >
-              Products
+              Reports
             </NavLink>
           </li>
         </ul>
