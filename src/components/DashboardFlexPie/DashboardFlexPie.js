@@ -1,9 +1,10 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "@mescius/wijmo.styles/wijmo.css";
 import React, { useState } from "react";
-import useEvent from "react-use-event-hook";
-import * as wijmo from "@mescius/wijmo";
+// import useEvent from "react-use-event-hook";
+// import * as wijmo from "@mescius/wijmo";
 import * as wjChart from "@mescius/wijmo.react.chart";
+import * as wjChartAnimate from "@mescius/wijmo.react.chart.animation";
 import "./DashboardFlexPie.css";
 // import { data, palette } from "./data";
 
@@ -36,25 +37,26 @@ function DashboardFlexPie({ chartData }) {
 
   console.log("this is casesByProduct: ", casesByProduct);
 
-  const getLabelContent = useEvent((ht) => {
-    const sum = casesByProduct.map((c) => c.cases);
-    console.log("this is sum: ", sum);
-    sum.reduce((sum, cur) => sum + cur);
-    console.log("this is sum after reduce: ", sum);
-    return wijmo.format("{name} {val:p2}", {
-      val: ht.value / sum,
-    });
-  });
+  // const getLabelContent = useEvent((ht) => {
+  //   const sum = casesByProduct.map((c) => c.cases);
+  //   console.log("this is sum: ", sum);
+  //   sum.reduce((sum, cur) => sum + cur);
+  //   console.log("this is sum after reduce: ", sum);
+  //   return wijmo.format("{name} {val:p2}", {
+  //     val: ht.value / sum,
+  //   });
+  // });
   return (
     <div className="container-fluid">
       <wjChart.FlexPie
-        header={`Support cases by product for week of ${chartData.Week}`}
+        header={`Support Case Data for the Week of ${chartData.Week}`}
         bindingName="product"
         binding="cases"
         itemsSource={casesByProduct}
         palette={palette}
       >
         {/* <wjChart.FlexPieDataLabel content={getLabelContent} /> */}
+        <wjChartAnimate.FlexChartAnimation animationMode="Point" />
       </wjChart.FlexPie>
     </div>
   );

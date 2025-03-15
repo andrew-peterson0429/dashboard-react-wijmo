@@ -33,9 +33,9 @@ function DashboardPage() {
   return (
     <>
       <div className="dashboard-wrapper">
-        <div className=".d-flex">
-          <div>
-            <label htmlFor="week">Week:</label>
+        <div>
+          <div className="mb-3">
+            <p>Week:</p>
             <wjInput.ComboBox
               id="week"
               itemsSource={weeks}
@@ -44,7 +44,7 @@ function DashboardPage() {
           </div>
         </div>
         <DashboardFlexPie chartData={weekData} />
-        <ColumnChart />
+        <ColumnChart chartData={weekData} />
         {/* <DashboardFlexChart chartData={weekData} /> */}
         {/* <DashboardFlexGrid /> */}
       </div>

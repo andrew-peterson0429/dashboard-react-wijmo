@@ -1,9 +1,10 @@
 // import { Designer } from "@mescius/activereportsjs-react";
+import "./ReportsPage.css";
 
 function ReportsPage() {
   return (
     <>
-      <div>
+      <div className="reportsPageWrapper">
         <h1>Reports Page</h1>
         {/* <Designer /> */}
       </div>
