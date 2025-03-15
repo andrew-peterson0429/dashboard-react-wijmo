@@ -6,7 +6,11 @@ function ReportsPage() {
     <>
       <div className="reportsPageWrapper">
         <h1>Reports Page</h1>
-        {/* <Designer /> */}
+        {/* <div id="designer-host">
+          <Designer
+            report={{ id: "report.rdlx-json", displayName: "sample report" }}
+          />
+        </div> */}
       </div>
     </>
   );

@@ -42,13 +42,15 @@ function MainNavigation() {
         </ul>
       </div>
       <div className="form-inline">
-        <img
-          src={avatar}
-          className="rounded-circle"
-          width="60"
-          height="60"
-          alt="Avatar"
-        />
+        <button className="rounded-circle">
+          <img
+            src={avatar}
+            className="rounded-circle "
+            width="60"
+            height="60"
+            alt="Avatar"
+          />
+        </button>
       </div>
     </nav>
   );
